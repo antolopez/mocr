@@ -47,7 +47,7 @@ namespace BBDD
 		//Comprobamos si la bbdd ya existe o si debemos crearla
 		ifstream archivo;
 		archivo.open(ruta, ios::binary|ios::in);//Intentamos abrir el archivo en modo binario y lectura
-		existe_bbdd = archivo!=0;//Comprobamos si ha habido problemas al abrir el archivo
+		existe_bbdd = !archivo.fail();//Comprobamos si ha habido problemas al abrir el archivo
 		
 		//Abrimos la bbdd
 		//Si ya había una abierta la cerramos antes

@@ -18949,7 +18949,7 @@ static int winGetTempname(sqlite3_vfs *pVfs, int nBuf, char *zBuf){
   for(i=strlen(zTempPath); i>0 && zTempPath[i-1]=='\\'; i--){}
   zTempPath[i] = 0;
   sqlite3_snprintf(pVfs->mxPathname-30, zBuf,
-                   "%s\\"SQLITE_TEMP_FILE_PREFIX, zTempPath);
+                   strcat("%s\\", SQLITE_TEMP_FILE_PREFIX), zTempPath);
   j = strlen(zBuf);
   sqlite3Randomness(20, &zBuf[j]);
   for(i=0; i<20; i++, j++){
