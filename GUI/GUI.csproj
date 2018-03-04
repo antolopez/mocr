@@ -1,0 +1,302 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{171D9B8F-D4B8-4FE9-9CAD-C083DA08289A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OCR</RootNamespace>
+    <AssemblyName>OCR</AssemblyName>
+    <ApplicationIcon>icono.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ayuda\AcercaDeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ayuda\AcercaDeForm.Designer.cs">
+      <DependentUpon>AcercaDeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion.cs" />
+    <Compile Include="ConfiguracionGeneralForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfiguracionGeneralForm.Designer.cs">
+      <DependentUpon>ConfiguracionGeneralForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImagenActualForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImagenActualForm.Designer.cs">
+      <DependentUpon>ImagenActualForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabelTrasparente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LabelTrasparente.Designer.cs">
+      <DependentUpon>LabelTrasparente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpcionesKNNForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpcionesKNNForm.Designer.cs">
+      <DependentUpon>OpcionesKNNForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Perfiles\General.cs" />
+    <Compile Include="Perfiles\NuevoPerfilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfiles\NuevoPerfilForm.Designer.cs">
+      <DependentUpon>NuevoPerfilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Perfiles\Perfil.cs" />
+    <Compile Include="Perfiles\PerfilesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfiles\PerfilesForm.Designer.cs">
+      <DependentUpon>PerfilesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Perfiles\PerfilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Perfiles\PerfilForm.Designer.cs">
+      <DependentUpon>PerfilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Perfiles\Preprocesado.cs" />
+    <Compile Include="Perfiles\Reconocimiento.cs" />
+    <Compile Include="Perfiles\Segmentacion.cs" />
+    <Compile Include="Preprocesado\EnderezadoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preprocesado\EnderezadoForm.Designer.cs">
+      <DependentUpon>EnderezadoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preprocesado\EscaladoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preprocesado\EscaladoForm.Designer.cs">
+      <DependentUpon>EscaladoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preprocesado\UmbralizadoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preprocesado\UmbralizadoForm.Designer.cs">
+      <DependentUpon>UmbralizadoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrincipalForm.Designer.cs">
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Ayuda\AcercaDeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AcercaDeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfiguracionGeneralForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConfiguracionGeneralForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImagenActualForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImagenActualForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpcionesKNNForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OpcionesKNNForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfiles\NuevoPerfilForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NuevoPerfilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfiles\PerfilesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PerfilesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfiles\PerfilForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PerfilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preprocesado\EnderezadoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EnderezadoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preprocesado\EscaladoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EscaladoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preprocesado\UmbralizadoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UmbralizadoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrincipalForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrincipalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Segmentación\ArreglarLineasForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ArreglarLineasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Segmentación\CaracteresForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CaracteresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Segmentación\LineasForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LineasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Segmentación\PalabrasForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PalabrasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Segmentación\SlantForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SlantForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Segmentación\SlopeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SlopeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextoReconocidoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextoReconocidoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Segmentación\ArreglarLineasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Segmentación\ArreglarLineasForm.Designer.cs">
+      <DependentUpon>ArreglarLineasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Segmentación\CaracteresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Segmentación\CaracteresForm.Designer.cs">
+      <DependentUpon>CaracteresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Segmentación\LineasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Segmentación\LineasForm.Designer.cs">
+      <DependentUpon>LineasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Segmentación\PalabrasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Segmentación\PalabrasForm.Designer.cs">
+      <DependentUpon>PalabrasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Segmentación\SlantForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Segmentación\SlantForm.Designer.cs">
+      <DependentUpon>SlantForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Segmentación\SlopeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Segmentación\SlopeForm.Designer.cs">
+      <DependentUpon>SlopeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextoReconocidoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextoReconocidoForm.Designer.cs">
+      <DependentUpon>TextoReconocidoForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Escaner\Escaner.csproj">
+      <Project>{B53245D1-C093-415A-B11D-1DF49A96D3DD}</Project>
+      <Name>Escaner</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Imagen\Imagen.vcproj">
+      <Project>{E9EA122F-F3E2-4529-85AB-6757CD9E4338}</Project>
+      <Name>Imagen</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AbrirImagen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Escaner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icono.ico" />
+    <Content Include="pru.ico" />
+    <None Include="Resources\Acercade.png" />
+    <Content Include="Resources\Añadir.png" />
+    <None Include="Resources\Caracteres.png" />
+    <None Include="Resources\Editar.png" />
+    <Content Include="Resources\Eliminar.png" />
+    <None Include="Resources\Lineas.png" />
+    <None Include="Resources\Perfiles.png" />
+    <None Include="Resources\Escalar.png" />
+    <None Include="Resources\Palabras.png" />
+    <None Include="Resources\Esqueleto.png" />
+    <Content Include="Resources\Preferencias.png" />
+    <None Include="Resources\Slant.png" />
+    <None Include="Resources\Slope.png" />
+    <None Include="Resources\Reconocimiento.png" />
+    <None Include="Resources\Umbralizar.png" />
+    <None Include="Resources\Rotar.png" />
+    <None Include="Resources\GuardarImagen.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
